@@ -71,7 +71,7 @@ kubectl logs watchlist-operator-controller-manager-8549945dc7-f2qtb -n watchlist
 
 kubectl logs --follow pod/watchlist-operator-controller-manager-8549945dc7-zh67c -n watchlist-operator-system manager 
 
-# note: manager is the container name of the sidecar
+# note: manager is the container name of the sidecar, this is required in this case because there are two containers in the manager pod - manager and rbac-proxy
 ```
 
 #### deploy from repo
