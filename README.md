@@ -64,3 +64,27 @@ go vet ./...
 ```
 $ kubectl port-forward svc/mywatchlist-sample 7000:8080
 ```
+
+#### get logs from side-car pod 
+```
+kubectl logs watchlist-operator-controller-manager-8549945dc7-f2qtb -n watchlist-operator-system manager
+
+kubectl logs --follow pod/watchlist-operator-controller-manager-8549945dc7-zh67c -n watchlist-operator-system manager 
+
+# note: manager is the container name of the sidecar
+```
+
+#### deploy from repo
+```
+make deploy IMG=<repo>/mywatchlist-operator:v1
+```
+
+#### clean-up
+```
+make undeploy IMG=<repo>/mywatchlist-operator:v1
+```
+
+#### get all
+```
+kubectl get all -n watchlist-operator-system
+```

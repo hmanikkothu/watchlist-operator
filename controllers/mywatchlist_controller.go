@@ -46,6 +46,9 @@ type MyWatchlistReconciler struct {
 // +kubebuilder:rbac:groups=webapp.demo.my-watchlist.io,resources=mywatchlists,verbs=get;list;watch;create;update;patch;delete
 // +kubebuilder:rbac:groups=webapp.demo.my-watchlist.io,resources=mywatchlists/status,verbs=get;update;patch
 
+// +kubebuilder:rbac:groups=apps,resources=deployments,verbs=list;watch;get;patch;create;update
+// +kubebuilder:rbac:groups=core,resources=services,verbs=list;watch;get;patch;create;update
+
 // Reconcile reconciles the request
 func (r *MyWatchlistReconciler) Reconcile(req ctrl.Request) (ctrl.Result, error) {
 	ctx := context.Background()
