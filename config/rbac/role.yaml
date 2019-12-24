@@ -1,0 +1,48 @@
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - webapp.demo.my-watchlist.io
+  resources:
+  - mywatchlists
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - webapp.demo.my-watchlist.io
+  resources:
+  - mywatchlists/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - webapp.demo.my-watchlist.io
+  resources:
+  - redis
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - webapp.demo.my-watchlist.io
+  resources:
+  - redis/status
+  verbs:
+  - get
+  - patch
+  - update

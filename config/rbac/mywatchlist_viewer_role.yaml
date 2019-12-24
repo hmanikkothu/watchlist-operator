@@ -1,0 +1,20 @@
+# permissions to do viewer mywatchlists.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: mywatchlist-viewer-role
+rules:
+- apiGroups:
+  - webapp.demo.my-watchlist.io
+  resources:
+  - mywatchlists
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - webapp.demo.my-watchlist.io
+  resources:
+  - mywatchlists/status
+  verbs:
+  - get

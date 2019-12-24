@@ -1,0 +1,26 @@
+# permissions to do edit mywatchlists.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: mywatchlist-editor-role
+rules:
+- apiGroups:
+  - webapp.demo.my-watchlist.io
+  resources:
+  - mywatchlists
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - webapp.demo.my-watchlist.io
+  resources:
+  - mywatchlists/status
+  verbs:
+  - get
+  - patch
+  - update

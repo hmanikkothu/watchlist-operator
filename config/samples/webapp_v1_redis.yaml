@@ -1,0 +1,7 @@
+apiVersion: webapp.demo.my-watchlist.io/v1
+kind: Redis
+metadata:
+  name: redis-sample
+spec:
+  # Add fields here
+  containerImage: k8s.gcr.io/redis:e2e

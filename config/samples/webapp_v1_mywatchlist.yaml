@@ -1,0 +1,11 @@
+apiVersion: webapp.demo.my-watchlist.io/v1
+kind: MyWatchlist
+metadata:
+  name: mywatchlist-sample
+spec:
+  # Add fields here
+  redisName: redis-sample
+  frontend: 
+    resources: 
+      requests:
+        cpu: 55m

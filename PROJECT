@@ -1,0 +1,10 @@
+domain: demo.my-watchlist.io
+repo: my-watchlist.io
+resources:
+- group: webapp
+  kind: MyWatchlist
+  version: v1
+- group: webapp
+  kind: Redis
+  version: v1
+version: "2"
