@@ -1,5 +1,7 @@
 # watchlist-operator
 
+Demo source for article - https://medium.com/manikkothu/build-kubernetes-operator-using-kubebuilder-4bfef299757d 
+
 ### steps 
 ```
 $ go mod init my-watchlist.io
